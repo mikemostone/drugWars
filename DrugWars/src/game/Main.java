@@ -9,7 +9,7 @@ public class Main
 	public static void main(String[] args) 
 	{
 		Player player = createPlayer();
-		
+		createDay(1);
 	}	
 	public static void createDay(int day)
 	{
@@ -20,7 +20,7 @@ public class Main
 			drugs[i].setDrugName(drugNames[i]);
 			drugs[i].setDrugCost(setPrice(i));
 		}
-		
+		System.out.println("Its a new day.");
 	}
 	public static int setPrice(int index)
 	{
