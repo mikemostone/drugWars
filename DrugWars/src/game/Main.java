@@ -9,18 +9,27 @@ public class Main
 	public static void main(String[] args) 
 	{
 		Player player = createPlayer();
-		createDay(1);
+		Drug[] d = createDay();
+		for(int i = 0;i < d.length;i++)
+		{
+			System.out.println(d[i].getDrugName() + "\t\t\t" + d[i].getDrugCost());
+		}
 	}	
-	public static void createDay(int day)
+	public static Drug[] createDay()
 	{
 		Drug[] drugs = new Drug[6];
-		for(int i = 0;i < 6;i++)
+		
+		//System.out.println("Drugs\t\t\tPrices");
+		
+		String drugNames[] = {"Weed", "Shrooms", "Opium", "Meth", "Coke", "Heroin"};
+		
+		for(int i = 0;i < 5;i++)
 		{
-			String drugNames[] = {"Weed", "Shrooms", "Opium", "Meth", "Coke", "Heroin"};
-			drugs[i].setDrugName(drugNames[i]);
-			drugs[i].setDrugCost(setPrice(i));
+			drugs[i].setDrugName("Drug");
+			drugs[i].setDrugCost(setPrice(10));
+			
 		}
-		System.out.println("Its a new day.");
+		return drugs;
 	}
 	public static int setPrice(int index)
 	{
